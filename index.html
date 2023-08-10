@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Animations</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+
+        }
+
+        .container {
+            width: 800px;
+            border: 2px solid black;
+            padding: 40px 50px;
+            border-radius: 10px;
+            background-color: 	 #d9d9fe;
+        }
+
+        .box {
+            width: 100%;
+            background-color: tomato;
+
+            height: 50px;
+        }
+
+        h1 {
+            margin: 1cqh 0;
+            text-align: center;
+            color: purple;
+            font-size: 40px;
+
+        }
+        h2{
+            color: rgb(30, 2, 30);
+        }
+
+        .running-car {
+            height: 60px;
+            display: block;
+            margin: auto 0;
+            justify-content: start;
+            animation: grow;
+            animation-duration: 4s;
+            -webkit-animation-iteration-count: infinite;
+            
+        }
+
+        .ease{
+            animation-timing-function: ease;
+
+        }
+        .ease-in{
+            animation-timing-function: ease-in;
+
+        }
+        .ease-out{
+            animation-timing-function: ease-out;
+
+        }
+        .ease-in-out{
+            animation-timing-function: ease-in-out;
+
+        }
+        .cubic-bazier-curve{
+animation-timing-function: cubic-bezier(0,2.02,1,-0.22);
+        }
+
+
+        /* animations keyframe */
+         @keyframes grow {
+            0% {
+                margin-left: 0px;
+
+            }
+
+            100% {
+
+                margin-left: 720px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>The Transition Timing Function Property</h1>
+
+        <div class="mainbox-container">
+            <h2>ease</h2>
+            <div class="box">
+                <img src="./img/car.gif" alt="Car running" class="running-car ease">
+
+            </div>
+        </div>
+
+        <div class="mainbox-container">
+            <h2>ease-in</h2>
+            <div class="box">
+                <img src="./img/car.gif" alt="Car running" class="running-car ease-in">
+
+            </div>
+        </div>
+
+        <div class="mainbox-container">
+            <h2>ease-out</h2>
+            <div class="box">
+                <img src="./img/car.gif" alt="Car running" class="running-car ease-out">
+
+            </div>
+        </div>
+
+        <div class="mainbox-container">
+            <h2>ease-in-out</h2>
+            <div class="box">
+                <img src="./img/car.gif" alt="Car running" class="running-car ease-in-out">
+
+            </div>
+        </div>
+
+        <div class="mainbox-container">
+            <h2>Cubic Bazier Curve : cubic-bezier(0,2.02,1,-0.22)</h2>
+            <div class="box">
+                <img src="./img/car.gif" alt="Car running" class="running-car .cubic-bazier-curve">
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
